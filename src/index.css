@@ -135,16 +135,12 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* Account for fixed navbar height */
 }
 
 /* Ensure proper scrolling behavior */
 body {
   scroll-behavior: smooth;
-}
-
-/* Prevent scroll anchoring issues */
-html, body {
-  scroll-padding-top: 0;
 }
 
 /* Marquee animation */
