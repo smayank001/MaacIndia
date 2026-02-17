@@ -5,13 +5,41 @@ import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import maacLogo from "@/assets/maac-logo.png";
 
 const courseCategories = [
-  { name: "3D Animation", path: "/courses/category/3d-animation", desc: "Master 3D modeling, rigging & animation" },
-  { name: "Visual Effects (VFX)", path: "/courses/category/visual-effects", desc: "Create Hollywood-grade visual effects" },
-  { name: "Digital Content Creation", path: "/courses/category/digital-content-creation", desc: "Graphic design, video & web design" },
-  { name: "Game Design", path: "/courses/category/game-design", desc: "Build immersive gaming experiences" },
-  { name: "Motion Graphics & Broadcast", path: "/courses/category/broadcast", desc: "Motion graphics for TV & media" },
-  { name: "Filmmaking & Photography", path: "/courses/category/filmmaking", desc: "Cinematography, editing & direction" },
-  { name: "Skill Enhancement", path: "/courses/category/skill-enhancement", desc: "Short-term industry tool programs" },
+  {
+    name: "3D Animation",
+    path: "/courses/3d-animation",
+    desc: "Master 3D modeling, rigging & animation",
+  },
+  {
+    name: "Visual Effects (VFX)",
+    path: "/courses/visual-effects",
+    desc: "Create Hollywood-grade visual effects",
+  },
+  {
+    name: "Digital Content Creation",
+    path: "/courses/digital-content-creation",
+    desc: "Graphic design, video & web design",
+  },
+  {
+    name: "Game Design",
+    path: "/courses/game-design",
+    desc: "Build immersive gaming experiences",
+  },
+  {
+    name: "Motion Graphics & Broadcast",
+    path: "/courses/broadcast",
+    desc: "Motion graphics for TV & media",
+  },
+  {
+    name: "Filmmaking & Photography",
+    path: "/courses/filmmaking",
+    desc: "Cinematography, editing & direction",
+  },
+  {
+    name: "Skill Enhancement",
+    path: "/courses/skill-enhancement",
+    desc: "Short-term industry tool programs",
+  },
 ];
 
 const studentsDropdown = [
@@ -43,10 +71,19 @@ const aboutDropdown = [
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Courses", path: "/courses", dropdown: courseCategories, isMega: true },
+  {
+    name: "Courses",
+    path: "/courses",
+    dropdown: courseCategories,
+    isMega: true,
+  },
   { name: "About", path: "/about", dropdown: aboutDropdown },
   { name: "Events", path: "/events", dropdown: eventsDropdown },
-  { name: "Student's World", path: "/students/gallery", dropdown: studentsDropdown },
+  {
+    name: "Student's World",
+    path: "/students/gallery",
+    dropdown: studentsDropdown,
+  },
   { name: "Partner With Us", path: "/partner" },
   { name: "Locate Centre", path: "/locate" },
   { name: "Contact", path: "/contact" },
@@ -63,7 +100,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center">
-            <img src={maacLogo} alt="MAAC India" className="h-10 md:h-12 w-auto" />
+            <img
+              src={maacLogo}
+              alt="MAAC India"
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -72,13 +113,20 @@ const Navbar = () => {
               <div
                 key={link.name}
                 className="relative"
-                onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
+                onMouseEnter={() =>
+                  link.dropdown && setActiveDropdown(link.name)
+                }
                 onMouseLeave={() => setActiveDropdown(null)}
               >
                 <Link
                   to={link.path}
                   className={`px-3 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1 rounded-md
-                    ${location.pathname === link.path || location.pathname.startsWith(link.path + "/") ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
+                    ${
+                      location.pathname === link.path ||
+                      location.pathname.startsWith(link.path + "/")
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-3 h-3" />}
@@ -93,7 +141,9 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 p-3 glass-strong rounded-xl border border-border/40 ${link.isMega ? "w-[540px]" : "w-[220px]"}`}
+                        className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 p-3 glass-strong rounded-xl border border-border/40 ${
+                          link.isMega ? "w-[540px]" : "w-[220px]"
+                        }`}
                       >
                         {link.isMega ? (
                           <>
@@ -105,13 +155,23 @@ const Navbar = () => {
                                   className="p-3 rounded-lg hover:bg-muted/50 transition-colors group"
                                   onClick={() => setActiveDropdown(null)}
                                 >
-                                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{item.name}</p>
-                                  {item.desc && <p className="text-xs text-muted-foreground mt-0.5">{item.desc}</p>}
+                                  <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
+                                    {item.name}
+                                  </p>
+                                  {item.desc && (
+                                    <p className="text-xs text-muted-foreground mt-0.5">
+                                      {item.desc}
+                                    </p>
+                                  )}
                                 </Link>
                               ))}
                             </div>
                             <div className="mt-2 pt-2 border-t border-border/30">
-                              <Link to="/courses" className="text-sm text-primary hover:underline" onClick={() => setActiveDropdown(null)}>
+                              <Link
+                                to="/courses"
+                                className="text-sm text-primary hover:underline"
+                                onClick={() => setActiveDropdown(null)}
+                              >
                                 View All Courses →
                               </Link>
                             </div>
@@ -139,11 +199,21 @@ const Navbar = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <Link to="/contact" className="hidden md:inline-flex px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all duration-300">
+            <Link
+              to="/contact"
+              className="hidden md:inline-flex px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all duration-300"
+            >
               Apply Now
             </Link>
-            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-foreground">
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="lg:hidden p-2 text-foreground"
+            >
+              {isOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -164,12 +234,24 @@ const Navbar = () => {
                   {link.dropdown ? (
                     <>
                       <button
-                        onClick={() => setMobileExpanded(mobileExpanded === link.name ? null : link.name)}
+                        onClick={() =>
+                          setMobileExpanded(
+                            mobileExpanded === link.name ? null : link.name
+                          )
+                        }
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-colors
-                          ${location.pathname.startsWith(link.path) ? "text-primary bg-primary/10" : "text-muted-foreground"}`}
+                          ${
+                            location.pathname.startsWith(link.path)
+                              ? "text-primary bg-primary/10"
+                              : "text-muted-foreground"
+                          }`}
                       >
                         {link.name}
-                        <ChevronRight className={`w-4 h-4 transition-transform ${mobileExpanded === link.name ? "rotate-90" : ""}`} />
+                        <ChevronRight
+                          className={`w-4 h-4 transition-transform ${
+                            mobileExpanded === link.name ? "rotate-90" : ""
+                          }`}
+                        />
                       </button>
                       <AnimatePresence>
                         {mobileExpanded === link.name && (
@@ -184,7 +266,10 @@ const Navbar = () => {
                                 <Link
                                   key={item.name}
                                   to={item.path}
-                                  onClick={() => { setIsOpen(false); setMobileExpanded(null); }}
+                                  onClick={() => {
+                                    setIsOpen(false);
+                                    setMobileExpanded(null);
+                                  }}
                                   className="block px-4 py-2.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted/30"
                                 >
                                   {item.name}
@@ -200,7 +285,11 @@ const Navbar = () => {
                       to={link.path}
                       onClick={() => setIsOpen(false)}
                       className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors
-                        ${location.pathname === link.path ? "text-primary bg-primary/10" : "text-muted-foreground hover:text-foreground hover:bg-muted/30"}`}
+                        ${
+                          location.pathname === link.path
+                            ? "text-primary bg-primary/10"
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
+                        }`}
                     >
                       {link.name}
                     </Link>

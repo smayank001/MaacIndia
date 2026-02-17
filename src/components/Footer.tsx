@@ -1,16 +1,28 @@
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram, Youtube, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 import maacLogo from "@/assets/maac-logo.png";
 
 const footerLinks = {
   courses: [
-    { name: "3D Animation", path: "/courses/category/3d-animation" },
-    { name: "Visual Effects (VFX)", path: "/courses/category/visual-effects" },
-    { name: "Digital Content Creation", path: "/courses/category/digital-content-creation" },
-    { name: "Game Design", path: "/courses/category/game-design" },
-    { name: "Motion Graphics & Broadcast", path: "/courses/category/broadcast" },
-    { name: "Filmmaking & Photography", path: "/courses/category/filmmaking" },
-    { name: "Skill Enhancement", path: "/courses/category/skill-enhancement" },
+    { name: "3D Animation", path: "/courses/3d-animation" },
+    { name: "Visual Effects (VFX)", path: "/courses/visual-effects" },
+    {
+      name: "Digital Content Creation",
+      path: "/courses/digital-content-creation",
+    },
+    { name: "Game Design", path: "/courses/game-design" },
+    { name: "Motion Graphics & Broadcast", path: "/courses/broadcast" },
+    { name: "Filmmaking & Photography", path: "/courses/filmmaking" },
+    { name: "Skill Enhancement", path: "/courses/skill-enhancement" },
   ],
   quickLinks: [
     { name: "About Us", path: "/about" },
@@ -49,11 +61,17 @@ const Footer = () => (
             <img src={maacLogo} alt="MAAC India" className="h-12 w-auto" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-            India's leading creative institute for Animation, VFX, Gaming, Filmmaking & Multimedia education. 150+ centres across India. 25+ years of excellence.
+            India's leading creative institute for Animation, VFX, Gaming,
+            Filmmaking & Multimedia education. 150+ centres across India. 25+
+            years of excellence.
           </p>
           <div className="flex gap-3 mb-6">
             {socials.map(({ icon: Icon, href }, i) => (
-              <a key={i} href={href} className="w-9 h-9 rounded-lg glass flex items-center justify-center text-muted-foreground hover:text-primary hover:glow-red-sm transition-all duration-300">
+              <a
+                key={i}
+                href={href}
+                className="w-9 h-9 rounded-lg glass flex items-center justify-center text-muted-foreground hover:text-primary hover:glow-red-sm transition-all duration-300"
+              >
                 <Icon className="w-4 h-4" />
               </a>
             ))}
@@ -69,18 +87,27 @@ const Footer = () => (
             </div>
             <div className="flex items-start gap-3 text-sm text-muted-foreground">
               <MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />
-              <span>Tower B, Peninsula Business Park, Lower Parel, Mumbai - 400013</span>
+              <span>
+                Tower B, Peninsula Business Park, Lower Parel, Mumbai - 400013
+              </span>
             </div>
           </div>
         </div>
 
         {/* Courses */}
         <div>
-          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">COURSES</h4>
+          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">
+            COURSES
+          </h4>
           <ul className="space-y-2">
             {footerLinks.courses.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">{link.name}</Link>
+                <Link
+                  to={link.path}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -88,11 +115,18 @@ const Footer = () => (
 
         {/* Quick Links */}
         <div>
-          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">QUICK LINKS</h4>
+          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">
+            QUICK LINKS
+          </h4>
           <ul className="space-y-2">
             {footerLinks.quickLinks.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">{link.name}</Link>
+                <Link
+                  to={link.path}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -100,11 +134,18 @@ const Footer = () => (
 
         {/* Legal */}
         <div>
-          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">LEGAL</h4>
+          <h4 className="font-display text-xl text-foreground mb-4 tracking-wider">
+            LEGAL
+          </h4>
           <ul className="space-y-2">
             {footerLinks.legal.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">{link.name}</Link>
+                <Link
+                  to={link.path}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -116,10 +157,18 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
         <p>© 2025 MAAC India. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-          <Link to="/terms" className="hover:text-primary transition-colors">Terms of Use</Link>
-          <Link to="/cookies" className="hover:text-primary transition-colors">Cookie Policy</Link>
-          <Link to="/sitemap" className="hover:text-primary transition-colors">Sitemap</Link>
+          <Link to="/privacy" className="hover:text-primary transition-colors">
+            Privacy Policy
+          </Link>
+          <Link to="/terms" className="hover:text-primary transition-colors">
+            Terms of Use
+          </Link>
+          <Link to="/cookies" className="hover:text-primary transition-colors">
+            Cookie Policy
+          </Link>
+          <Link to="/sitemap" className="hover:text-primary transition-colors">
+            Sitemap
+          </Link>
         </div>
       </div>
     </div>

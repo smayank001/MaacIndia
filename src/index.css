@@ -137,6 +137,16 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure proper scrolling behavior */
+body {
+  scroll-behavior: smooth;
+}
+
+/* Prevent scroll anchoring issues */
+html, body {
+  scroll-padding-top: 0;
+}
+
 /* Marquee animation */
 @keyframes marquee {
   0% { transform: translateX(0); }

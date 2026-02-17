@@ -5,11 +5,20 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    // Scroll to top with smooth behavior
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    // Ensure we scroll to top for all navigation scenarios
+    // First immediate scroll to prevent any visual jump
+    window.scrollTo(0, 0);
+
+    // Then smooth scroll to top with a small delay to ensure proper execution
+    const timer = setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }, 100);
+
+    // Cleanup timer
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return null;

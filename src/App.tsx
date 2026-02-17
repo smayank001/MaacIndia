@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseCategory from "./pages/CourseCategory";
@@ -18,6 +17,7 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import Gallery from "./pages/Gallery";
+
 import Testimonials from "./pages/Testimonials";
 import Placements from "./pages/Placements";
 import Trends from "./pages/Trends";
@@ -42,13 +42,15 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Index />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/category/:slug" element={<CourseCategory />} />
-          <Route path="/courses/:slug" element={<CourseDetail />} />
+          <Route path="/courses/:categorySlug" element={<CourseCategory />} />
+          <Route
+            path="/courses/:categorySlug/:courseSlug"
+            element={<CourseDetail />}
+          />
           <Route path="/contact" element={<Contact />} />
 
           {/* About Section */}
