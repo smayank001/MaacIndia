@@ -46,7 +46,6 @@ const studentsDropdown = [
   { name: "Gallery", path: "/students/gallery" },
   { name: "Testimonials", path: "/students/testimonials" },
   { name: "Placements", path: "/students/placements" },
-  { name: "MAAC Trends", path: "/blog" },
 ];
 
 const eventsDropdown = [
@@ -84,8 +83,8 @@ const navLinks = [
     path: "/students/gallery",
     dropdown: studentsDropdown,
   },
+  { name: "Blog", path: "/blog" },
   { name: "Partner With Us", path: "/partner" },
-  { name: "Locate Centre", path: "/locate" },
   { name: "Contact", path: "/contact" },
 ];
 
@@ -102,7 +101,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center">
             <img
               src={maacLogo}
-              alt="MAAC India"
+              alt="MAAC Yelahanka"
               className="h-10 md:h-12 w-auto"
             />
           </Link>
@@ -201,9 +200,9 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <Link
               to="/contact"
-              className="hidden md:inline-flex px-5 py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all duration-300"
+              className="hidden md:inline-flex px-5 py-2.5 bg-accent text-accent-foreground text-sm font-semibold rounded-lg glow-gold-sm hover:brightness-110 transition-all duration-300"
             >
-              Apply Now
+              Book Free Counseling
             </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -299,9 +298,9 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block mt-3 px-4 py-3 bg-primary text-primary-foreground text-sm font-semibold rounded-lg text-center glow-red-sm"
+                className="block mt-3 px-4 py-3 bg-accent text-accent-foreground text-sm font-semibold rounded-lg text-center glow-gold-sm"
               >
-                Apply Now
+                Book Free Counseling
               </Link>
             </div>
           </motion.div>

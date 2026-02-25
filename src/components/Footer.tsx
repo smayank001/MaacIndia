@@ -29,10 +29,10 @@ const footerLinks = {
     { name: "Events", path: "/events" },
     { name: "Gallery", path: "/students/gallery" },
     { name: "Placements", path: "/students/placements" },
-    { name: "Blog & Trends", path: "/blog" },
+    { name: "Blog", path: "/blog" },
     { name: "Partner With Us", path: "/partner" },
-    { name: "Locate a Centre", path: "/locate" },
     { name: "Verify Certificate", path: "/verify" },
+    { name: "Career & Placement", path: "/career-placement" },
   ],
   legal: [
     { name: "Privacy Policy", path: "/privacy" },
@@ -58,19 +58,19 @@ const Footer = () => (
         {/* Brand */}
         <div className="lg:col-span-2">
           <div className="mb-4">
-            <img src={maacLogo} alt="MAAC India" className="h-12 w-auto" />
+            <img src={maacLogo} alt="MAAC Yelahanka" className="h-12 w-auto" />
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-            India's leading creative institute for Animation, VFX, Gaming,
-            Filmmaking & Multimedia education. 150+ centres across India. 25+
-            years of excellence.
+            MAAC Yelahanka — Bangalore's premier creative institute for
+            Animation, VFX, Gaming, Filmmaking & Multimedia education.
+            Industry-ready training with national placement support.
           </p>
           <div className="flex gap-3 mb-6">
             {socials.map(({ icon: Icon, href }, i) => (
               <a
                 key={i}
                 href={href}
-                className="w-9 h-9 rounded-lg glass flex items-center justify-center text-muted-foreground hover:text-primary hover:glow-red-sm transition-all duration-300"
+                className="w-9 h-9 rounded-lg glass flex items-center justify-center text-muted-foreground hover:text-accent hover:glow-gold-sm transition-all duration-300"
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -78,17 +78,18 @@ const Footer = () => (
           </div>
           <div className="space-y-2">
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Phone className="w-4 h-4 text-primary shrink-0" />
-              <span>1800-233-6088</span>
+              <Phone className="w-4 h-4 text-accent shrink-0" />
+              <span>080-4111 0555 | +91 74065 70001</span>
             </div>
             <div className="flex items-center gap-3 text-sm text-muted-foreground">
-              <Mail className="w-4 h-4 text-primary shrink-0" />
-              <span>info@maacindia.com</span>
+              <Mail className="w-4 h-4 text-accent shrink-0" />
+              <span>yelahanka@maacmail.com</span>
             </div>
             <div className="flex items-start gap-3 text-sm text-muted-foreground">
-              <MapPin className="w-4 h-4 mt-0.5 text-primary shrink-0" />
+              <MapPin className="w-4 h-4 mt-0.5 text-accent shrink-0" />
               <span>
-                Tower B, Peninsula Business Park, Lower Parel, Mumbai - 400013
+                789, 1st Floor, MIG, 2nd Stage, Side of Veer Savarkar Flyover,
+                Yelahanka New Town, Bangalore – 560064
               </span>
             </div>
           </div>
@@ -104,7 +105,7 @@ const Footer = () => (
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
@@ -123,7 +124,7 @@ const Footer = () => (
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
@@ -142,7 +143,7 @@ const Footer = () => (
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="text-sm text-muted-foreground hover:text-accent transition-colors duration-300"
                 >
                   {link.name}
                 </Link>
@@ -155,18 +156,18 @@ const Footer = () => (
       <div className="divider-gradient mt-12 mb-6" />
 
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-        <p>© 2025 MAAC India. All rights reserved.</p>
+        <p>© 2025 MAAC Yelahanka. All rights reserved.</p>
         <div className="flex gap-4">
-          <Link to="/privacy" className="hover:text-primary transition-colors">
+          <Link to="/privacy" className="hover:text-accent transition-colors">
             Privacy Policy
           </Link>
-          <Link to="/terms" className="hover:text-primary transition-colors">
+          <Link to="/terms" className="hover:text-accent transition-colors">
             Terms of Use
           </Link>
-          <Link to="/cookies" className="hover:text-primary transition-colors">
+          <Link to="/cookies" className="hover:text-accent transition-colors">
             Cookie Policy
           </Link>
-          <Link to="/sitemap" className="hover:text-primary transition-colors">
+          <Link to="/sitemap" className="hover:text-accent transition-colors">
             Sitemap
           </Link>
         </div>

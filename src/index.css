@@ -22,8 +22,8 @@
     --muted: 240 5% 16%;
     --muted-foreground: 240 5% 55%;
 
-    --accent: 220 90% 56%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -78,6 +78,14 @@
     box-shadow: 0 0 15px -3px hsl(357 90% 47% / 0.3);
   }
 
+  .glow-gold {
+    box-shadow: 0 0 30px -5px hsl(45 100% 51% / 0.4);
+  }
+
+  .glow-gold-sm {
+    box-shadow: 0 0 15px -3px hsl(45 100% 51% / 0.3);
+  }
+
   .text-gradient {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 70%));
@@ -86,6 +94,11 @@
   .text-gradient-red {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, hsl(357 90% 55%), hsl(357 90% 40%));
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(45 100% 60%), hsl(40 90% 45%));
   }
 
   .section-padding {
@@ -134,12 +147,6 @@
 
 /* Smooth scroll */
 html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 5rem; /* Account for fixed navbar height */
-}
-
-/* Ensure proper scrolling behavior */
-body {
   scroll-behavior: smooth;
 }
 

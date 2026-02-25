@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseCategory from "./pages/CourseCategory";
@@ -18,7 +17,6 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import EventDetail from "./pages/EventDetail";
 import Gallery from "./pages/Gallery";
-
 import Testimonials from "./pages/Testimonials";
 import Placements from "./pages/Placements";
 import Trends from "./pages/Trends";
@@ -43,7 +41,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop />
         <Routes>
           {/* Main Pages */}
           <Route path="/" element={<Index />} />
@@ -79,7 +76,7 @@ const App = () => (
 
           {/* Other */}
           <Route path="/partner" element={<PartnerWithUs />} />
-          <Route path="/locate" element={<LocateCentre />} />
+          {/* Locate Centre removed — replaced by Blog */}
           <Route path="/centre/:slug" element={<CentreDetail />} />
           <Route path="/verify" element={<VerifyCertificate />} />
 
