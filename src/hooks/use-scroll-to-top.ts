@@ -9,9 +9,6 @@ export const useScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log('Route changed to:', pathname); // Debug log
-    console.log('Current scroll position:', window.scrollY); // Debug log
-    
     // More aggressive scroll to top implementation
     const scrollToTop = () => {
       try {
@@ -25,13 +22,11 @@ export const useScrollToTop = () => {
         // Additional safeguard scrolls
         setTimeout(() => {
           window.scrollTo(0, 0);
-          console.log('Scroll position after first attempt:', window.scrollY); // Debug log
         }, 10);
         
         setTimeout(() => {
           if (window.scrollY > 1) {
             window.scrollTo(0, 0);
-            console.log('Final scroll position:', window.scrollY); // Debug log
           }
         }, 50);
       } catch (error) {

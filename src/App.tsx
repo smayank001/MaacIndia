@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseCategory from "./pages/CourseCategory";
@@ -32,66 +33,87 @@ import Disclaimer from "./pages/Disclaimer";
 import CookiePolicy from "./pages/CookiePolicy";
 import SitemapPage from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
+import CityPage from "./pages/CityPage";
 
 const queryClient = new QueryClient();
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          {/* Main Pages */}
-          <Route path="/" element={<Index />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/courses/:categorySlug" element={<CourseCategory />} />
-          <Route
-            path="/courses/:categorySlug/:courseSlug"
-            element={<CourseDetail />}
-          />
-          <Route path="/contact" element={<Contact />} />
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            {/* Main Pages */}
+            <Route path="/" element={<Index />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/courses/:categorySlug" element={<CourseCategory />} />
+            <Route
+              path="/courses/:categorySlug/:courseSlug"
+              element={<CourseDetail />}
+            />
+            <Route path="/contact" element={<Contact />} />
 
-          {/* About Section */}
-          <Route path="/about" element={<About />} />
-          <Route path="/about/vision" element={<AboutVision />} />
-          <Route path="/about/why-maac" element={<WhyMaac />} />
-          <Route path="/about/infrastructure" element={<Infrastructure />} />
-          <Route path="/about/leadership" element={<Leadership />} />
-          <Route path="/about/awards" element={<Awards />} />
+            {/* About Section */}
+            <Route path="/about" element={<About />} />
+            <Route path="/about/vision" element={<AboutVision />} />
+            <Route path="/about/why-maac" element={<WhyMaac />} />
+            <Route path="/about/infrastructure" element={<Infrastructure />} />
+            <Route path="/about/leadership" element={<Leadership />} />
+            <Route path="/about/awards" element={<Awards />} />
 
-          {/* Events */}
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:slug" element={<EventDetail />} />
+            {/* Events */}
+            <Route path="/events" element={<Events />} />
+            <Route path="/events/:slug" element={<EventDetail />} />
 
-          {/* Student's World */}
-          <Route path="/student-zone" element={<StudentZone />} />
-          <Route path="/students/gallery" element={<Gallery />} />
-          <Route path="/students/testimonials" element={<Testimonials />} />
-          <Route path="/students/placements" element={<Placements />} />
+            {/* Student's World */}
+            <Route path="/student-zone" element={<StudentZone />} />
+            <Route path="/students/gallery" element={<Gallery />} />
+            <Route path="/students/testimonials" element={<Testimonials />} />
+            <Route path="/students/placements" element={<Placements />} />
 
-          {/* Blog */}
-          <Route path="/blog" element={<Trends />} />
-          <Route path="/blog/:slug" element={<BlogDetail />} />
+            {/* Blog */}
+            <Route path="/blog" element={<Trends />} />
+            <Route path="/blog/:slug" element={<BlogDetail />} />
 
-          {/* Other */}
-          <Route path="/partner" element={<PartnerWithUs />} />
-          {/* Locate Centre removed — replaced by Blog */}
-          <Route path="/centre/:slug" element={<CentreDetail />} />
-          <Route path="/verify" element={<VerifyCertificate />} />
+            {/* Other */}
+            <Route path="/partner" element={<PartnerWithUs />} />
+            {/* Locate Centre removed — replaced by Blog */}
+            <Route path="/centre/:slug" element={<CentreDetail />} />
+            <Route path="/verify" element={<VerifyCertificate />} />
 
-          {/* Legal */}
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/cookies" element={<CookiePolicy />} />
-          <Route path="/sitemap" element={<SitemapPage />} />
+            {/* City Landing Pages */}
+            <Route path="/animation-courses-hyderabad" element={<CityPage />} />
+            <Route path="/animation-courses-mysore" element={<CityPage />} />
+            <Route path="/animation-courses-mangalore" element={<CityPage />} />
+            <Route
+              path="/animation-courses-coimbatore"
+              element={<CityPage />}
+            />
+            <Route path="/animation-courses-chennai" element={<CityPage />} />
+            <Route path="/animation-courses-pune" element={<CityPage />} />
+            <Route path="/animation-courses-mumbai" element={<CityPage />} />
+            <Route path="/animation-courses-vizag" element={<CityPage />} />
+            <Route path="/animation-courses-kochi" element={<CityPage />} />
+            <Route
+              path="/animation-courses-trivandrum"
+              element={<CityPage />}
+            />
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+            {/* Legal */}
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="/sitemap" element={<SitemapPage />} />
+
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

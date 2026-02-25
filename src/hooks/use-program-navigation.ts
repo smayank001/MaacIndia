@@ -8,8 +8,6 @@ export const useProgramNavigation = () => {
   const navigate = useNavigate();
 
   const handleProgramClick = (path: string, event?: React.MouseEvent) => {
-    console.log('Program link clicked:', path); // Debug log
-    
     // Prevent default behavior if it's a click event
     if (event) {
       event.preventDefault();
@@ -21,19 +19,16 @@ export const useProgramNavigation = () => {
     // Force scroll to top after navigation
     setTimeout(() => {
       try {
-        console.log('Attempting to scroll to top'); // Debug log
         // Multiple scroll attempts to ensure it works
         window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
         
         setTimeout(() => {
           window.scrollTo(0, 0);
-          console.log('Scroll position after first attempt:', window.scrollY); // Debug log
         }, 10);
         
         setTimeout(() => {
           if (window.scrollY > 1) {
             window.scrollTo(0, 0);
-            console.log('Final scroll position:', window.scrollY); // Debug log
           }
         }, 50);
       } catch (error) {
