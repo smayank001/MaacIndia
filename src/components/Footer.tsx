@@ -362,7 +362,7 @@ const Footer = () => (
           {cities.map((city) => (
             <Link
               key={city.slug}
-              to={`/animation-courses-${city.slug}`}
+              to={`/${city.slug}`}
               className="px-3 py-1.5 glass rounded-lg text-xs text-muted-foreground hover:text-accent hover:border-accent/30 transition-colors"
             >
               {city.name}

@@ -86,22 +86,7 @@ const App = () => (
             <Route path="/verify" element={<VerifyCertificate />} />
 
             {/* City Landing Pages */}
-            <Route path="/animation-courses-hyderabad" element={<CityPage />} />
-            <Route path="/animation-courses-mysore" element={<CityPage />} />
-            <Route path="/animation-courses-mangalore" element={<CityPage />} />
-            <Route
-              path="/animation-courses-coimbatore"
-              element={<CityPage />}
-            />
-            <Route path="/animation-courses-chennai" element={<CityPage />} />
-            <Route path="/animation-courses-pune" element={<CityPage />} />
-            <Route path="/animation-courses-mumbai" element={<CityPage />} />
-            <Route path="/animation-courses-vizag" element={<CityPage />} />
-            <Route path="/animation-courses-kochi" element={<CityPage />} />
-            <Route
-              path="/animation-courses-trivandrum"
-              element={<CityPage />}
-            />
+            <Route path="/:slug" element={<CityPage />} />
 
             {/* Legal */}
             <Route path="/privacy" element={<PrivacyPolicy />} />

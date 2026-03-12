@@ -12,7 +12,7 @@ export interface CityData {
 
 export const cities: CityData[] = [
   {
-    slug: "hyderabad",
+    slug: "bestanimationinstitute",
     name: "Hyderabad",
     state: "Telangana",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Hyderabad | MAAC Yelahanka",
@@ -23,7 +23,7 @@ export const cities: CityData[] = [
     placementContent: "MAAC Yelahanka's dedicated placement cell provides personalized career support for students from Hyderabad, including portfolio grooming, demo reel assistance, mock interviews, and direct referrals to studios across India. Our alumni work at leading studios in Hyderabad, Bangalore, Mumbai, and Chennai.",
   },
   {
-    slug: "mysore",
+    slug: "bestanimationinstituteinmysore",
     name: "Mysore",
     state: "Karnataka",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Mysore | MAAC Yelahanka",
@@ -34,7 +34,7 @@ export const cities: CityData[] = [
     placementContent: "MAAC Yelahanka provides end-to-end placement support for Mysore students — from portfolio building and demo reel creation to mock interviews and direct studio referrals across India's top animation and VFX companies.",
   },
   {
-    slug: "mangalore",
+    slug: "bestanimationinstituteinmangalore",
     name: "Mangalore",
     state: "Karnataka",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Mangalore | MAAC Yelahanka",
@@ -45,7 +45,7 @@ export const cities: CityData[] = [
     placementContent: "Our placement cell offers Mangalore students dedicated career support including portfolio grooming, mock interviews, demo reel reviews, and connections to studios across India. Many of our Mangalore alumni now work at top production houses.",
   },
   {
-    slug: "coimbatore",
+    slug: "bestanimationinstituteinbangalore",
     name: "Coimbatore",
     state: "Tamil Nadu",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Coimbatore | MAAC Yelahanka",
@@ -56,7 +56,7 @@ export const cities: CityData[] = [
     placementContent: "Students from Coimbatore benefit from our dedicated placement cell, which offers portfolio development, interview preparation, and direct connections to animation studios in Bangalore, Chennai, Mumbai, and beyond.",
   },
   {
-    slug: "chennai",
+    slug: "bestanimationinstituteinindia",
     name: "Chennai",
     state: "Tamil Nadu",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Chennai | MAAC Yelahanka",
@@ -67,7 +67,7 @@ export const cities: CityData[] = [
     placementContent: "MAAC Yelahanka's placement cell connects Chennai students with top studios across India. From demo reel polishing to mock interviews and portfolio reviews, we ensure you're fully prepared for your dream creative career.",
   },
   {
-    slug: "pune",
+    slug: "bestanimationinstituteinkarnataka",
     name: "Pune",
     state: "Maharashtra",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Pune | MAAC Yelahanka",
@@ -78,7 +78,7 @@ export const cities: CityData[] = [
     placementContent: "MAAC Yelahanka's pan-India placement network connects Pune students with studios in Mumbai, Bangalore, Hyderabad, and beyond. Portfolio grooming, mock interviews, and demo reel assistance are part of our comprehensive placement support.",
   },
   {
-    slug: "mumbai",
+    slug: "bestanimationinstituteinyelahanka",
     name: "Mumbai",
     state: "Maharashtra",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Mumbai | MAAC Yelahanka",
@@ -89,7 +89,7 @@ export const cities: CityData[] = [
     placementContent: "Our placement cell provides Mumbai students with end-to-end career support, connecting them with studios in Mumbai, Bangalore, Hyderabad, and Chennai. Demo reel assistance, portfolio reviews, and mock interviews prepare you for success.",
   },
   {
-    slug: "vizag",
+    slug: "bestanimationinstituteinnorthbangalore",
     name: "Vizag",
     state: "Andhra Pradesh",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Vizag | MAAC Yelahanka",
@@ -100,7 +100,7 @@ export const cities: CityData[] = [
     placementContent: "Vizag students at MAAC Yelahanka receive personalized placement support, including portfolio building, demo reel creation, mock interviews, and referrals to leading studios across India.",
   },
   {
-    slug: "kochi",
+    slug: "bestanimationinstituteinkochi",
     name: "Kochi",
     state: "Kerala",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Kochi | MAAC Yelahanka",
@@ -111,7 +111,7 @@ export const cities: CityData[] = [
     placementContent: "MAAC Yelahanka provides Kochi students with comprehensive placement support — portfolio grooming, demo reel reviews, mock interviews, and direct referrals to animation studios across India.",
   },
   {
-    slug: "trivandrum",
+    slug: "bestanimationinstituteintrivandrum",
     name: "Trivandrum",
     state: "Kerala",
     metaTitle: "Best 3D Animation & VFX Courses for Students in Trivandrum | MAAC Yelahanka",

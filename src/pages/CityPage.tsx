@@ -1,4 +1,4 @@
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
   Send,
@@ -14,6 +14,7 @@ import {
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getCityBySlug } from "@/data/cities";
+import NotFound from "./NotFound";
 
 const schemaMarkup = (city: string) => ({
   "@context": "https://schema.org",
@@ -70,29 +71,17 @@ const breadcrumbSchema = (cityName: string, slug: string) => ({
       "@type": "ListItem",
       position: 3,
       name: cityName,
-      item: `https://maacyelahanka.in/animation-courses-${slug}`,
+      item: `https://maacyelahanka.in/${slug}`,
     },
   ],
 });
 
 const CityPage = () => {
-  const location = useLocation();
-  const citySlug = location.pathname.replace("/animation-courses-", "");
-  const city = citySlug ? getCityBySlug(citySlug) : undefined;
+  const { slug } = useParams();
+  const city = slug ? getCityBySlug(slug) : undefined;
 
   if (!city) {
-    return (
-      <Layout>
-        <section className="section-padding pt-32 md:pt-40 text-center">
-          <h1 className="font-display text-4xl text-foreground">
-            City Page Not Found
-          </h1>
-          <Link to="/" className="text-accent mt-4 inline-block">
-            Go Home
-          </Link>
-        </section>
-      </Layout>
-    );
+    return <NotFound />;
   }
 
   return (
@@ -102,7 +91,7 @@ const CityPage = () => {
         <meta name="description" content={city.metaDescription} />
         <link
           rel="canonical"
-          href={`https://maacyelahanka.in/animation-courses-${city.slug}`}
+          href={`https://maacyelahanka.in/${city.slug}`}
         />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup(city.name))}
