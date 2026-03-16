@@ -12,9 +12,7 @@ const sitemapSections = [
       { name: "Courses", path: "/courses" },
       { name: "About MAAC", path: "/about" },
       { name: "Contact Us", path: "/contact" },
-      { name: "Locate a Centre", path: "/locate" },
-      { name: "Partner With Us", path: "/partner" },
-      { name: "Verify Certificate", path: "/verify" },
+      { name: "Locate Us", path: "/locate-us" },
     ],
   },
   {
@@ -38,11 +36,14 @@ const sitemapSections = [
   },
   {
     title: "Course Categories",
-    links: courseCategories.map(c => ({ name: c.title, path: `/courses/category/${c.slug}` })),
+    links: courseCategories.map((c) => ({
+      name: c.title,
+      path: `/courses/category/${c.slug}`,
+    })),
   },
   {
     title: "Events",
-    links: events.map(e => ({ name: e.title, path: `/events/${e.slug}` })),
+    links: events.map((e) => ({ name: e.title, path: `/events/${e.slug}` })),
   },
   {
     title: "Legal",
@@ -60,18 +61,27 @@ const SitemapPage = () => (
     <section className="section-padding pt-32 md:pt-40">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <h1 className="font-display text-5xl md:text-7xl text-foreground mb-12">SITEMAP</h1>
+          <h1 className="font-display text-5xl md:text-7xl text-foreground mb-12">
+            SITEMAP
+          </h1>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sitemapSections.map((section, i) => (
             <ScrollReveal key={section.title} delay={(i % 6) * 0.08}>
               <div className="glass rounded-xl p-6">
-                <h2 className="font-display text-xl text-foreground mb-4 tracking-wider">{section.title}</h2>
+                <h2 className="font-display text-xl text-foreground mb-4 tracking-wider">
+                  {section.title}
+                </h2>
                 <ul className="space-y-2">
-                  {section.links.map(link => (
+                  {section.links.map((link) => (
                     <li key={link.path}>
-                      <Link to={link.path} className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300">{link.name}</Link>
+                      <Link
+                        to={link.path}
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+                      >
+                        {link.name}
+                      </Link>
                     </li>
                   ))}
                 </ul>

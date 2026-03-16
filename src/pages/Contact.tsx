@@ -87,7 +87,7 @@ const Contact = () => (
                       icon: MapPin,
                       label: "Centre Address",
                       value:
-                        "789, 1st Floor, MIG, 2nd Stage, Side of Veer Savarkar Flyover, Yelahanka New Town, Bangalore – 560064",
+                        "789, 1st Floor, MIG, 2nd Stage, Near Mother Dairy Circle, Side of Veer Savarkar Flyover, Major Sandeep Unnikrishnan Road, Yelahanka New Town, Bangalore – 560 064",
                     },
                     { icon: Phone, label: "Landline", value: "080-4111 0555" },
                     { icon: Phone, label: "Mobile", value: "+91 74065 70001" },
@@ -118,14 +118,42 @@ const Contact = () => (
               {/* Google Maps Embed */}
               <div className="glass rounded-xl overflow-hidden aspect-video">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.0!2d77.5946!3d13.1007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDA2JzAyLjUiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3885.995427306094!2d77.57775913!3d13.09947604!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae185ef870ae61%3A0xa2122790b358fe37!2sMAAC%20Yelahanka%20-25%20Years%20of%20Excellence!5e0!3m2!1sen!2sin!4v1773304327652!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                   title="MAAC Yelahanka Location"
                 />
+              </div>
+
+              {/* QR Code */}
+              <div className="glass rounded-xl p-6 flex flex-col items-center text-center">
+                <MapPin className="w-8 h-8 text-accent mb-3" />
+                <h3 className="font-display text-xl text-foreground tracking-wider mb-2">
+                  SCAN TO VISIT US
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Open Google Maps instantly on your phone
+                </p>
+                <div className="bg-white rounded-xl p-4 mb-4">
+                  <img
+                    src="/images/qr-location.png"
+                    alt="Scan QR to locate MAAC Yelahanka on Google Maps"
+                    className="w-36 h-36 object-contain"
+                  />
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  789, 1st Floor, MIG, 2nd Stage,
+                  <br />
+                  Near Mother Dairy Circle, Side of Veer Savarkar Flyover,
+                  <br />
+                  Major Sandeep Unnikrishnan Road,
+                  <br />
+                  Yelahanka New Town, Bangalore – 560 064
+                </p>
               </div>
             </div>
           </ScrollReveal>

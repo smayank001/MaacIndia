@@ -14,8 +14,8 @@ const Trends = () => {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="section-padding pt-32 md:pt-40">
+      {/* Hero with Video */}
+      <section className="relative section-padding pt-32 md:pt-40">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
             <Lightbulb className="w-10 h-10 text-accent mb-4" />
@@ -32,17 +32,28 @@ const Trends = () => {
             </p>
           </ScrollReveal>
 
+          {/* Blog Video */}
+          <ScrollReveal className="mb-12">
+            <div className="glass rounded-2xl overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full aspect-video object-cover"
+              >
+                <source src="/videos/blogvideo.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </ScrollReveal>
+
           <ScrollReveal>
             <div className="flex flex-wrap gap-2 mb-10">
               {blogCategories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    filter === cat
-                      ? "bg-accent text-accent-foreground glow-gold-sm"
-                      : "glass text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${filter === cat ? "bg-accent text-accent-foreground glow-gold-sm" : "glass text-muted-foreground hover:text-foreground"}`}
                 >
                   {cat}
                 </button>

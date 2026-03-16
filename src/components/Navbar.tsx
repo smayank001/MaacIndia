@@ -84,7 +84,7 @@ const navLinks = [
     dropdown: studentsDropdown,
   },
   { name: "Blog", path: "/blog" },
-  { name: "Partner With Us", path: "/partner" },
+  { name: "Locate Us", path: "/locate-us" },
   { name: "Contact", path: "/contact" },
 ];
 

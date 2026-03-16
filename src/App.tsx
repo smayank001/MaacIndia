@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import Courses from "./pages/Courses";
 import CourseCategory from "./pages/CourseCategory";
@@ -35,6 +34,9 @@ import CookiePolicy from "./pages/CookiePolicy";
 import SitemapPage from "./pages/Sitemap";
 import NotFound from "./pages/NotFound";
 import CityPage from "./pages/CityPage";
+import LocateUs from "./pages/LocateUs";
+
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -81,12 +83,27 @@ const App = () => (
 
             {/* Other */}
             <Route path="/partner" element={<PartnerWithUs />} />
-            {/* Locate Centre removed — replaced by Blog */}
+            <Route path="/locate-us" element={<LocateUs />} />
             <Route path="/centre/:slug" element={<CentreDetail />} />
             <Route path="/verify" element={<VerifyCertificate />} />
 
             {/* City Landing Pages */}
-            <Route path="/:slug" element={<CityPage />} />
+            <Route path="/animation-courses-hyderabad" element={<CityPage />} />
+            <Route path="/animation-courses-mysore" element={<CityPage />} />
+            <Route path="/animation-courses-mangalore" element={<CityPage />} />
+            <Route
+              path="/animation-courses-coimbatore"
+              element={<CityPage />}
+            />
+            <Route path="/animation-courses-chennai" element={<CityPage />} />
+            <Route path="/animation-courses-pune" element={<CityPage />} />
+            <Route path="/animation-courses-mumbai" element={<CityPage />} />
+            <Route path="/animation-courses-vizag" element={<CityPage />} />
+            <Route path="/animation-courses-kochi" element={<CityPage />} />
+            <Route
+              path="/animation-courses-trivandrum"
+              element={<CityPage />}
+            />
 
             {/* Legal */}
             <Route path="/privacy" element={<PrivacyPolicy />} />
