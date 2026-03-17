@@ -47,7 +47,7 @@ const courses = [
     title: "Digital Content Creation",
     image: "/images/courses/digital-content.webp",
     path: "/courses/digital-content-creation",
-    desc: "Learn graphic design, animation, video production, and web design",
+    desc: "Learn graphic design, animation, video production, web design and UI/ UX",
   },
   {
     title: "Game Design",

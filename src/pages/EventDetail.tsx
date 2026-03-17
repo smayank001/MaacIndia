@@ -77,12 +77,7 @@ const EventDetail = () => {
                     <input type="text" placeholder="Full Name" className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                     <input type="email" placeholder="Email Address" className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
                     <input type="tel" placeholder="Phone Number" className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors" />
-                    <select className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-muted-foreground text-sm focus:outline-none focus:border-primary transition-colors">
-                      <option>Select Centre</option>
-                      <option>MAAC Andheri</option>
-                      <option>MAAC Connaught Place</option>
-                      <option>MAAC Koramangala</option>
-                    </select>
+                    <input type="text" value="MAAC Yelahanka, Bangalore" readOnly className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm cursor-default focus:outline-none" />
                     <button type="submit" className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all text-sm uppercase tracking-wider">
                       Register
                     </button>
