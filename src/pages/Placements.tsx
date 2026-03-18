@@ -58,7 +58,7 @@ const placementStories = [
     name: "BANDHAVYA S.",
     role: "Graphic Designer",
     company: "Urdhva Management Pvt Ltd",
-    image: "/images/alumni/ritika-singh.jpg",
+    image: "/images/alumni/designer.jpg",
   },
   {
     name: "RAHUL C.J.",
