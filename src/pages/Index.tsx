@@ -47,7 +47,7 @@ const courses = [
     title: "Digital Content Creation",
     image: "/images/courses/digital-content.webp",
     path: "/courses/digital-content-creation",
-    desc: "Learn graphic design, animation, video production, web design and UI/ UX",
+    desc: "Learn graphic design, animation, video production, and web design",
   },
   {
     title: "Game Design",
@@ -117,39 +117,40 @@ const stats = [
 
 const alumniHighlights = [
   {
-    name: "MANIT KUMAR",
-    role: "3D Animation Artist",
-    salary: "9.9 LPA",
-    company: "Sundeep Groups",
-    image: "/images/alumni/manit-kumar.jpg",
+    name: "RAHUL G. R.",
+    role: "2D and 3D Artist",
+    company: "Planotech Group of Companies",
+    image: "/images/alumni/rahul-gr.jpeg",
   },
   {
-    name: "PREETHI S",
-    role: "3D Animation Artist",
-    salary: "8.5 LPA",
-    company: "Light and Wonder",
-    image: "/images/alumni/preethi-s.jpg",
+    name: "YASHWANTH T. K.",
+    role: "Executive Designer",
+    company: "Emaginations Experience Pvt. Ltd",
+    image: "/images/alumni/yashwanth-tk.jpg",
   },
   {
-    name: "SHIVAM GUJRAN",
-    role: "3D Animation Artist",
-    salary: "6.6 LPA",
-    company: "OpenCV Org",
-    image: "/images/alumni/shivam-gujran.jpg",
+    name: "CHIRANTHANA K. G.",
+    role: "2D and 3D Visualizer",
+    company: "Shubharambh Productions Private Limited",
+    image: "/images/alumni/chiranthana-kg.jpg",
   },
   {
-    name: "SHILPI GUPTA",
-    role: "Interior Designer",
-    salary: "4.92 LPA",
-    company: "Livspace",
-    image: "/images/alumni/shilpi-gupta.jpg",
+    name: "KARTHIK K.",
+    role: "Graphic Designer",
+    company: "Planotech Group of Companies",
+    image: "/images/alumni/karthik-k.jpg",
   },
   {
-    name: "RITIKA SINGH",
-    role: "Motion Graphic Artist",
-    salary: "4.56 LPA",
-    company: "Junglee Games",
+    name: "BANDHAVYA S.",
+    role: "Graphic Designer",
+    company: "Urdhva Management Pvt Ltd",
     image: "/images/alumni/ritika-singh.jpg",
+  },
+  {
+    name: "RAHUL C.J.",
+    role: "Editor",
+    company: "Zook Production",
+    image: "/images/alumni/rahul-cj-new.jpg",
   },
 ];
 
@@ -466,7 +467,7 @@ const Index = () => (
             houses, and VFX giants — and you could be next.
           </p>
         </ScrollReveal>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {alumniHighlights.map((alumni, i) => (
             <ScrollReveal key={alumni.name} delay={i * 0.1}>
               <div className="glass rounded-xl overflow-hidden hover-glow text-center">
@@ -484,9 +485,6 @@ const Index = () => (
                   </h3>
                   <p className="text-xs text-muted-foreground mt-1">
                     {alumni.role}
-                  </p>
-                  <p className="text-xs text-accent font-semibold mt-1">
-                    {alumni.salary}
                   </p>
                   <p className="text-xs text-muted-foreground">
                     {alumni.company}
