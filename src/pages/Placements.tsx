@@ -34,25 +34,25 @@ const placementStories = [
     name: "RAHUL G. R.",
     role: "2D and 3D Artist",
     company: "Planotech Group of Companies",
-    image: "/images/alumni/manit-kumar.jpg",
+    image: "/images/alumni/rahul-gr.jpeg",
   },
   {
     name: "YASHWANTH T. K.",
     role: "Executive Designer",
     company: "Emaginations Experience Pvt. Ltd",
-    image: "/images/alumni/preethi-s.jpg",
+    image: "/images/alumni/yashwanth-tk.jpg",
   },
   {
     name: "CHIRANTHANA K. G.",
     role: "2D and 3D Visualizer",
     company: "Shubharambh Productions Private Limited",
-    image: "/images/alumni/shivam-gujran.jpg",
+    image: "/images/alumni/chiranthana-kg.jpg",
   },
   {
     name: "KARTHIK K.",
     role: "Graphic Designer",
     company: "Planotech Group of Companies",
-    image: "/images/alumni/shilpi-gupta.jpg",
+    image: "/images/alumni/karthik-k.jpg",
   },
   {
     name: "BANDHAVYA S.",
@@ -64,7 +64,7 @@ const placementStories = [
     name: "RAHUL C.J.",
     role: "Editor",
     company: "Zook Production",
-    image: "/images/alumni/rahul-cj.jpg",
+    image: "/images/alumni/rahul-cj-new.jpg",
   },
 ];
 
