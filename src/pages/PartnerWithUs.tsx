@@ -102,39 +102,18 @@ const PartnerWithUs = () => (
             ENQUIRE NOW
           </h2>
           <div className="glass-strong rounded-xl p-6 glow-red-sm">
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="text"
-                placeholder="Full Name"
-                className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-              />
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-              />
-              <input
-                type="text"
-                placeholder="City / Location"
-                className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-              />
-              <textarea
-                rows={3}
-                placeholder="Tell us about your interest"
-                className="w-full px-4 py-3 rounded-lg bg-muted/50 border border-border/50 text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-              />
-              <button
-                type="submit"
-                className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all text-sm uppercase tracking-wider"
-              >
-                Submit Enquiry
-              </button>
-            </form>
+            <p className="text-muted-foreground text-sm mb-6">
+              Interested in owning a MAAC franchise? Click below to send us your
+              enquiry and our team will reach out to you.
+            </p>
+            <a
+              href="https://mail.google.com/mail/?view=cm&to=yelahanka@maacmail.com&su=Franchise%20Enquiry%20-%20MAAC%20Partnership&body=Hi%20MAAC%20Team%2C%0A%0AI%20am%20interested%20in%20partnering%20with%20MAAC.%0A%0AName%3A%20%0AEmail%3A%20%0APhone%3A%20%0ACity%20%2F%20Location%3A%20%0A%0AAbout%20my%20interest%3A%20%0A%0APlease%20share%20more%20details%20about%20the%20franchise%20opportunity.%0A%0AThank%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2"
+            >
+              Submit Enquiry
+            </a>
           </div>
         </ScrollReveal>
 
