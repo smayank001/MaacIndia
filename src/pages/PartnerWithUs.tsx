@@ -1,4 +1,5 @@
 import { Building, TrendingUp, Users, Shield, HelpCircle } from "lucide-react";
+import { openMailCompose } from "@/lib/mail";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -106,14 +107,18 @@ const PartnerWithUs = () => (
               Interested in owning a MAAC franchise? Click below to send us your
               enquiry and our team will reach out to you.
             </p>
-            <a
-              href="https://mail.google.com/mail/?view=cm&to=yelahanka@maacmail.com&su=Franchise%20Enquiry%20-%20MAAC%20Partnership&body=Hi%20MAAC%20Team%2C%0A%0AI%20am%20interested%20in%20partnering%20with%20MAAC.%0A%0AName%3A%20%0AEmail%3A%20%0APhone%3A%20%0ACity%20%2F%20Location%3A%20%0A%0AAbout%20my%20interest%3A%20%0A%0APlease%20share%20more%20details%20about%20the%20franchise%20opportunity.%0A%0AThank%20you."
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() =>
+                openMailCompose(
+                  "yelahanka@maacmail.com",
+                  "Franchise Enquiry - MAAC Partnership",
+                  "Hi MAAC Team,\n\nI am interested in partnering with MAAC.\n\nName: \nEmail: \nPhone: \nCity / Location: \n\nAbout my interest: \n\nPlease share more details about the franchise opportunity.\n\nThank you.",
+                )
+              }
               className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2"
             >
               Submit Enquiry
-            </a>
+            </button>
           </div>
         </ScrollReveal>
 

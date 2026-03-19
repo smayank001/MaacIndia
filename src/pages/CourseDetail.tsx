@@ -11,6 +11,7 @@ import {
   BookOpen,
   ChevronRight,
 } from "lucide-react";
+import { openMailCompose } from "@/lib/mail";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
@@ -52,15 +53,10 @@ const EnquiryForm = ({ courseName }: { courseName: string }) => {
   ) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
+    openMailCompose(
+      "yelahanka@maacmail.com",
       `Course Enquiry - ${form.course} | MAAC Yelahanka`,
-    );
-    const body = encodeURIComponent(
       `Hi MAAC Yelahanka,\n\nI would like to enquire about a course.\n\nFull Name: ${form.fullName}\nMobile: ${form.mobile}\nEmail: ${form.email}\nCourse Interested In: ${form.course}\nCentre: MAAC Yelahanka, Bangalore\n\nPlease get back to me at your earliest convenience.\n\nThank you.`,
-    );
-    window.open(
-      `https://mail.google.com/mail/?view=cm&to=yelahanka@maacmail.com&su=${subject}&body=${body}`,
-      "_blank",
     );
   };
   const inputClass =

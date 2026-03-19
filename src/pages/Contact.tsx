@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { openMailCompose } from "@/lib/mail";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -34,14 +35,11 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
+    openMailCompose(
+      "yelahanka@maacmail.com",
       "Book a Free Career Counseling - MAAC Yelahanka",
-    );
-    const body = encodeURIComponent(
       `Hi MAAC Yelahanka,\n\nI would like to book a free career counseling session.\n\nFirst Name: ${form.firstName}\nLast Name: ${form.lastName}\nEmail: ${form.email}\nPhone: ${form.phone}\nCourse of Interest: ${form.course}\nCity: ${form.city}\nMessage: ${form.message}\n\nPlease get back to me at your earliest convenience.\n\nThank you.`,
     );
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&to=yelahanka@maacmail.com&su=${subject}&body=${body}`;
-    window.open(gmailUrl, "_blank");
   };
 
   return (

@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { Calendar, ArrowRight, Trophy, Star } from "lucide-react";
+import { openMailCompose } from "@/lib/mail";
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 import { getEventBySlug } from "@/data/events";
@@ -110,14 +111,18 @@ const EventDetail = () => {
                     Sign up to participate or attend this event. Click below to
                     send us your registration details.
                   </p>
-                  <a
-                    href={`https://mail.google.com/mail/?view=cm&to=yelahanka@maacmail.com&su=Event%20Registration%20-%20${encodeURIComponent(event.title)}&body=Hi%20MAAC%20Yelahanka%2C%0A%0AI%20would%20like%20to%20register%20for%20the%20event%3A%20${encodeURIComponent(event.title)}%0A%0AName%3A%20%0AEmail%3A%20%0APhone%3A%20%0ACentre%3A%20MAAC%20Yelahanka%2C%20Bangalore%0A%0AThank%20you.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    onClick={() =>
+                      openMailCompose(
+                        "yelahanka@maacmail.com",
+                        `Event Registration - ${event.title}`,
+                        `Hi MAAC Yelahanka,\n\nI would like to register for the event: ${event.title}\n\nName: \nEmail: \nPhone: \nCentre: MAAC Yelahanka, Bangalore\n\nThank you.`,
+                      )
+                    }
                     className="w-full py-3 bg-primary text-primary-foreground font-semibold rounded-lg glow-red-sm hover:brightness-110 transition-all text-sm uppercase tracking-wider flex items-center justify-center gap-2"
                   >
                     Register
-                  </a>
+                  </button>
                 </div>
               </ScrollReveal>
             </div>
